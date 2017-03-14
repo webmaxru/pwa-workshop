@@ -9,11 +9,7 @@
       "outDir": "build",
       "assets": [
         "assets",
-        "favicon.ico",
-        "manifest.json",
-        "sw.js",
-        "sw-registration.js",
-        "idb-keyval.js"
+        "favicon.ico"
       ],
       "index": "index.html",
       "main": "main.ts",

@@ -8,18 +8,12 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
-import { IndexedDBService } from './services/indexedDB.service';
 import { MyFeedsComponent } from './my-feeds/my-feeds.component';
-import { PostTweetComponent } from './post-tweet/post-tweet.component';
-import { ControlPushComponent } from './control-push/control-push.component'
-
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFeedsComponent,
-    PostTweetComponent,
-    ControlPushComponent
+    MyFeedsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +21,7 @@ import { ControlPushComponent } from './control-push/control-push.component'
     HttpModule,
     MaterialModule
   ],
-  providers: [IndexedDBService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
