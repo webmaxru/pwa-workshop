@@ -17,20 +17,4 @@
   <app-root>Loading...</app-root>
 <script type="text/javascript" src="inline.8412756f7608e8b18b25.bundle.js"></script><script type="text/javascript" src="polyfills.6810ecaadc72a8a6993d.bundle.js"></script><script type="text/javascript" src="vendor.eeb39e9653f8691c3170.bundle.js"></script><script type="text/javascript" src="main.6c463bd84a02a274c053.bundle.js"></script></body>
 
-<script>
-  if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js', {
-    scope: '/'
-  })
-    .then(function (swRegistration) {
-      console.log('[SW Registration]: Service Worker was registered', swRegistration)
-    })
-    .catch(function (error) {
-      console.log('[SW Registration]: There was a problem with the Service Worker registration', error)
-    })
-} else {
-  console.log("[SW Registration]: Service workers aren't supported in this browser")
-}
-</script>
-
 </html>
