@@ -4,8 +4,8 @@ module.exports = {
     'build/**.bundle.js',
     'build/**.bundle.css',
     'build/assets/**',
-    'manifest.json',
-    'idb-keyval.js'
+    'build/manifest.json',
+    'build/idb-keyval.js'
   ],
   root: 'build',
   stripPrefix: 'build/',
