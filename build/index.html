@@ -11,7 +11,12 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<link href="styles.cb9fa7fcd6671dad1a45.bundle.css" rel="stylesheet"/></head>
+<link href="styles.cb9fa7fcd6671dad1a45.bundle.css" rel="stylesheet"/>
+
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#c34c91">
+
+</head>
 
 <body>
   <app-root>
@@ -41,6 +46,14 @@
 } else {
   console.log("[SW Registration]: Service workers aren't supported in this browser")
 }
+
+  window.addEventListener('beforeinstallprompt', function(event) {
+    console.log('[SW Registration]: Showing install prompt');
+
+    event.userChoice.then(function(choiceResult) {
+      console.log(choiceResult.outcome);
+    });
+  });
 </script>
 
 </html>

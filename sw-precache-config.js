@@ -3,7 +3,8 @@ module.exports = {
     'build/**.html',
     'build/**.bundle.js',
     'build/**.bundle.css',
-    'build/assets/**'
+    'build/assets/**',
+    'build/manifest.json'
   ],
   root: 'build',
   stripPrefix: 'build/',
