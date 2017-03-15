@@ -27,6 +27,9 @@ window.addEventListener('load', function () {
   document.querySelector('.js-push-unsubscribe-button').addEventListener('click', function () {
     pushUnsubscribe()
   })
+  document.querySelector('.js-sync-button').addEventListener('click', function () {
+    registerSync()
+  })
 })
 
 function urlBase64ToUint8Array (base64String) {
@@ -97,4 +100,40 @@ function pushUnsubscribe () {
       console.log('[SW Registration]: Unable to get push subscription', error)
     })
   })
+}
+
+function registerSync () {
+  if ('SyncManager' in window) {
+    var messageForm = document.querySelector('.js-sync-form')
+    var messageField = messageForm.querySelector('.js-sync-input')
+
+    messageForm.addEventListener('submit', function (event) {
+      console.log('[SW Registration]: Form submit detected')
+
+      var message = {
+        message: messageField.value
+      }
+
+      idbKeyval.set('tweet-message', message)
+        .then(function () {
+          console.log('[SW Registration]: Wrote data to IndexedDB', message)
+
+          navigator.serviceWorker.ready.then(function (swRegistration) {
+            swRegistration.sync.register('post-tweet')
+              .then(function () {
+                console.log('[SW Registration]: Background sync registered')
+              })
+              .catch(function (error) {
+                // system was unable to register for a sync,
+                // this could be an OS-level restriction
+                console.log('[SW Registration]: Error registering Background sync', error)
+              })
+          })
+        })
+    })
+
+    console.log('[SW Registration]: Background sync initiated')
+  } else {
+    console.log("[SW Registration]: Background sync isn't supported in this browser")
+  }
 }

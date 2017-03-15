@@ -79,3 +79,42 @@ self.addEventListener('notificationclick', function (event) {
 self.addEventListener('notificationclose', function (event) {
   log('[Service Worker]: Received notificationclose event')
 })
+
+importScripts('./idb-keyval.js')
+
+self.addEventListener('sync', function (event) {
+  log('[Service Worker]: Received sync event', event.tag)
+
+  if (event.tag === 'post-tweet') {
+    event.waitUntil(
+
+      idbKeyval.get('tweet-message')
+        .then(function (message) {
+          log('[Service Worker]: Read data from IndexedDB', message)
+
+          return fetch('http://localhost:3000/post-tweet/', {
+            method: 'POST',
+            body: JSON.stringify(message),
+            headers: {
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+              'Content-Type': 'application/json'
+            }
+          })
+        })
+        .then(function (response) {
+          log('[Service Worker]: Received response from backend', response)
+          return response.json()
+        })
+        .then(function (data) {
+          if (data.status === '200') {
+            log('[Service Worker]: Tweet post success')
+          }
+        })
+        .catch(function (error) {
+          err(error)
+        })
+
+    )
+  }
+})

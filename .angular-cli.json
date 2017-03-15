@@ -12,7 +12,8 @@
         "favicon.ico",
         "manifest.json",
         "sw-registration.js",
-        "sw.js"
+        "sw.js",
+        "idb-keyval.js"
       ],
       "index": "index.html",
       "main": "main.ts",

@@ -5,7 +5,8 @@ module.exports = {
     'build/**.bundle.css',
     'build/assets/**',
     'build/manifest.json',
-    'build/sw-registration.js'
+    'build/sw-registration.js',
+    'build/idb-keyval.js',
   ],
   root: 'build',
   stripPrefix: 'build/',
