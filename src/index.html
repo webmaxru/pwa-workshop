@@ -15,6 +15,23 @@
 
 <body>
   <app-root>Loading...</app-root>
+
+<script>
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js', {
+    scope: '/'
+  })
+    .then(function (swRegistration) {
+      console.log('[SW Registration]: Service Worker was registered', swRegistration)
+    })
+    .catch(function (error) {
+      console.log('[SW Registration]: There was a problem with the Service Worker registration', error)
+    })
+} else {
+  console.log("[SW Registration]: Service workers aren't supported in this browser")
+}
+</script>
+
 </body>
 
 </html>
