@@ -1,0 +1,28 @@
+<md-card>
+  <md-card-header>
+    <md-icon md-card-avatar>sync</md-icon>
+    <md-card-title>Background Sync</md-card-title>
+    <md-card-subtitle>Defer actions until the user has stable connectivity</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+
+    <!-- (submit)="messageFormSubmit(messageForm)" -->
+    <form #messageForm="ngForm" novalidate class="js-sync-form">
+
+      <md-input-container style="width: 300px;">
+        <input mdInput placeholder="Message" value="Message" type="text" required [ngModel]="message" #messageRef name="message"
+          class="js-sync-input">
+        <div *ngIf="messageRef.errors?.required && messageRef.touched" class="error">
+          Message is required
+        </div>
+      </md-input-container>
+
+      <button md-raised-button color="accent" type="submit"><md-icon>message</md-icon>Tweet!</button>
+
+    </form>
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-raised-button class="js-sync-button">Register background sync</button>
+  </md-card-actions>
+</md-card>

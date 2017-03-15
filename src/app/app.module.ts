@@ -9,11 +9,16 @@ import { MaterialModule } from '@angular/material';
 import 'hammerjs';
 
 import { MyFeedsComponent } from './my-feeds/my-feeds.component';
+import { ControlPushComponent } from './control-push/control-push.component'
+import { PostTweetComponent } from './post-tweet/post-tweet.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFeedsComponent
+    MyFeedsComponent,
+    ControlPushComponent,
+    PostTweetComponent
   ],
   imports: [
     BrowserModule,

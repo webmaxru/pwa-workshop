@@ -4,7 +4,8 @@ module.exports = {
     'build/**.bundle.js',
     'build/**.bundle.css',
     'build/assets/**',
-    'build/manifest.json'
+    'build/manifest.json',
+    'build/sw-registration.js'
   ],
   root: 'build',
   stripPrefix: 'build/',
@@ -24,5 +25,6 @@ module.exports = {
   {
     urlPattern: /pbs\.twimg\.com/,
     handler: 'cacheFirst'
-  }]
+  }],
+  importScripts: ['/sw.js']
 };

@@ -11,12 +11,10 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<link href="styles.cb9fa7fcd6671dad1a45.bundle.css" rel="stylesheet"/>
-
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#c34c91">
 
-</head>
+<link href="styles.cb9fa7fcd6671dad1a45.bundle.css" rel="stylesheet"/></head>
 
 <body>
   <app-root>
@@ -30,30 +28,9 @@
 <md-progress-bar _ngcontent-c13="" aria-valuemax="100" aria-valuemin="0" mode="indeterminate" role="progressbar" _nghost-c12="" class="mat-primary mat-progress-bar" aria-valuenow="0"><div _ngcontent-c12="" class="mat-progress-bar-background mat-progress-bar-element"></div><div _ngcontent-c12="" class="mat-progress-bar-buffer mat-progress-bar-element"></div><div _ngcontent-c12="" class="mat-progress-bar-primary mat-progress-bar-fill mat-progress-bar-element" style="transform: scaleX(0);"></div><div _ngcontent-c12="" class="mat-progress-bar-secondary mat-progress-bar-fill mat-progress-bar-element"></div></md-progress-bar>
 
   </app-root>
-<script type="text/javascript" src="inline.8412756f7608e8b18b25.bundle.js"></script><script type="text/javascript" src="polyfills.6810ecaadc72a8a6993d.bundle.js"></script><script type="text/javascript" src="vendor.eeb39e9653f8691c3170.bundle.js"></script><script type="text/javascript" src="main.6c463bd84a02a274c053.bundle.js"></script></body>
 
-<script>
-  if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js', {
-    scope: '/'
-  })
-    .then(function (swRegistration) {
-      console.log('[SW Registration]: Service Worker was registered', swRegistration)
-    })
-    .catch(function (error) {
-      console.log('[SW Registration]: There was a problem with the Service Worker registration', error)
-    })
-} else {
-  console.log("[SW Registration]: Service workers aren't supported in this browser")
-}
+<script type="text/javascript" src="./sw-registration.js"></script>
 
-  window.addEventListener('beforeinstallprompt', function(event) {
-    console.log('[SW Registration]: Showing install prompt');
-
-    event.userChoice.then(function(choiceResult) {
-      console.log(choiceResult.outcome);
-    });
-  });
-</script>
+<script type="text/javascript" src="inline.586b888cfded4ba4b13e.bundle.js"></script><script type="text/javascript" src="polyfills.6810ecaadc72a8a6993d.bundle.js"></script><script type="text/javascript" src="vendor.7b9f863689168b776938.bundle.js"></script><script type="text/javascript" src="main.a7a8fb3b6b6b481006b4.bundle.js"></script></body>
 
 </html>

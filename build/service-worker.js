@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["assets/images/logo.png","997c63e444ab64654d66d07bca573f0a"],["index.html","16e176494bab494263fedcea10e531f3"],["inline.8412756f7608e8b18b25.bundle.js","73ea71e686fa59d050b7e7a887110b3e"],["main.6c463bd84a02a274c053.bundle.js","cc3847ac9be55776c16e3ab12df33392"],["polyfills.6810ecaadc72a8a6993d.bundle.js","e566f0e64d8b6af0e76583d69788c258"],["styles.cb9fa7fcd6671dad1a45.bundle.css","cb9fa7fcd6671dad1a45bf9b8b330648"],["vendor.eeb39e9653f8691c3170.bundle.js","b89f1b15746517b629ea8ab0e8ccb173"]];
+var precacheConfig = [["assets/icons/SplashScreen.scale-100.png","084919ffb80a0e7edf7cff5be8a2f1a8"],["assets/icons/Square150x150Logo.scale-100.png","368591a86af14903ec9850518dae2f20"],["assets/icons/Square44x44Logo.scale-100.png","823036078b6fb918d6af59c6d1f18ebf"],["assets/icons/StoreLogo.scale-100.png","30350120da2edc794c58ac83049f5a9b"],["assets/icons/android-chrome-192x192.png","291c83c6b4c191d60b4d7f59d67783b9"],["assets/icons/android-chrome-512x512.png","a5bfc4ed5bdf96d731710a5b05e965a8"],["assets/images/logo.png","997c63e444ab64654d66d07bca573f0a"],["index.html","183104dcd1a5d019226e974432759601"],["inline.586b888cfded4ba4b13e.bundle.js","6d1c515f4df487e4e5cb0ff0d7d36ae3"],["main.a7a8fb3b6b6b481006b4.bundle.js","71015f3096addb03c272b5d4c990fbe0"],["manifest.json","ae2a4e55d20b8bc3a672026f5da39680"],["polyfills.6810ecaadc72a8a6993d.bundle.js","e566f0e64d8b6af0e76583d69788c258"],["styles.cb9fa7fcd6671dad1a45.bundle.css","cb9fa7fcd6671dad1a45bf9b8b330648"],["sw-registration.js","a09d3324a8f5820ea288aa7c81f2e2e5"],["vendor.7b9f863689168b776938.bundle.js","3e413494be4ad22cdb52b08438afd96b"]];
 var cacheName = 'sw-precache-v3-sw-precache-' + (self.registration ? self.registration.scope : '');
 
 
@@ -290,4 +290,6 @@ toolbox.router.get(/pbs\.twimg\.com/, toolbox.cacheFirst, {});
 
 
 
+
+importScripts("/sw.js");
 
