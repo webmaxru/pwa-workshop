@@ -1,5 +1,7 @@
 # A simple app for the PWA Workshop
 
+![PWA Workshop](https://github.com/webmaxru/pwa-workshop/raw/step0/src/assets/images/logo.png "PWA Workshop")
+
 ## Prerequisites
 1. Latest stable versions of `node`, `npm` installed.
 2. Having `yarn` installed is strongly recommended.
