@@ -20,11 +20,7 @@ or
 npm install
 ```
 3. Start `Web Server for Chrome` extension and point to `build` folder using "Choose folder" button. Open the link you see in "Web Server URL(s)" section (make sure the "Automatically show index.html" option is on). You should see the page with `PWA Workshop` header.
-4.
-```bash
-npm run generate-sw
-```
-Make sure `build/service-worker.js` file was created
+
 
 ## We are ready to start the workshop! Follow the trainer instructions.
 
