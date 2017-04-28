@@ -11,17 +11,18 @@
     "e2e": "ng e2e",
     "build-prod": "ng build --prod",
     "generate-sw": "sw-precache --config=./sw-precache-config.js --verbose",
-    "build-full": "npm run build-prod && npm run generate-sw"
+    "build-full": "npm run build-prod && npm run generate-sw",
+    "rest": "cd ../pwa-workshop-api && npm start"
   },
   "private": true,
   "dependencies": {
-    "@angular/app-shell": "^0.1.0",
+    "@angular/animations": ">=4.0.0-beta <5.0.0",
     "@angular/common": ">=4.0.0-beta <5.0.0",
     "@angular/compiler": ">=4.0.0-beta <5.0.0",
     "@angular/core": ">=4.0.0-beta <5.0.0",
     "@angular/forms": ">=4.0.0-beta <5.0.0",
     "@angular/http": ">=4.0.0-beta <5.0.0",
-    "@angular/material": "^2.0.0-beta.2",
+    "@angular/material": "2.0.0-beta.3",
     "@angular/platform-browser": ">=4.0.0-beta <5.0.0",
     "@angular/platform-browser-dynamic": ">=4.0.0-beta <5.0.0",
     "@angular/router": ">=4.0.0-beta <5.0.0",
@@ -31,7 +32,7 @@
     "idb": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.7.6"
+    "zone.js": "~0.8.4"
   },
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.0",
